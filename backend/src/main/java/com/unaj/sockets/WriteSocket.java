@@ -8,7 +8,7 @@ package com.unaj.sockets;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -18,12 +18,13 @@ import java.util.logging.Logger;
  */
 public class WriteSocket extends Thread{
     private String nameThread;
-    private SocketConexion sockCon;
+    @SuppressWarnings("unused")
+	private SocketConexion sockCon;
     private Buffer bufferGral;
     private SocketChannel channel;
     private Boolean demon=false;
     private int lenghtBuffer;
-    private ArrayList<String> mensajes = new ArrayList<String>();
+    //private ArrayList<String> mensajes = new ArrayList<String>();
 
     public WriteSocket(String nameThread,SocketConexion sockCon,Buffer bufferGral,Integer lenghtBuffer) throws IOException
     {

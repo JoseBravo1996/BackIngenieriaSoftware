@@ -5,9 +5,6 @@
  */
 package com.unaj.sockets;
 
-import java.util.ArrayList;
-import java.util.*; 
-
 /**
  *
  * @author Taglio
@@ -16,7 +13,9 @@ public class Buffer
 {
     private ArrayIndexed<String> mensajesToSend = new ArrayIndexed<String>();
     private ArrayIndexed<String> mensajesRecibed = new ArrayIndexed<String>();
-    private String name;
+  
+    @SuppressWarnings("unused")
+	private String name;
     
     public Buffer(String name){
         this.name = name;

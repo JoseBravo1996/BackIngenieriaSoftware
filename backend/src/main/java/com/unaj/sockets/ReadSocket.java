@@ -17,7 +17,8 @@ import java.util.logging.Logger;
  */
 public class ReadSocket extends Thread{
     private String nameThread;
-    private SocketConexion sockCon;
+    @SuppressWarnings("unused")
+	private SocketConexion sockCon;
     private Buffer bufferGral;
     private SocketChannel channel;
     private Boolean demon=false;
