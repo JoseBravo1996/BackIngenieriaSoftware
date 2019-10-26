@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -63,6 +64,7 @@ public class UsuarioService implements IUsuarioService,UserDetailsService{
 	@Override
 	@Transactional
 	public Usuario save(Usuario usuario) {
+		usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
 		return usuarioDao.save(usuario);
 	}
 
